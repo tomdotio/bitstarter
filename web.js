@@ -15,7 +15,6 @@ app.get('/', function(request, response) {
 
 	
 
-	response.send(data.toString("uft-8"));
 });
 
 var port = process.env.PORT || 5000;
