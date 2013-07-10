@@ -11,9 +11,6 @@ app.get('/', function(request, response) {
 		console.log(data);
 	});
 
-	var buffer = new Buffer(256);
-	
-	buffer.write(data, "utf-8");
 
 	response.send(data);
 });
