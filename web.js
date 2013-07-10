@@ -6,14 +6,17 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
   
+	
+	var data = new Buffer();
+
 	fs.readFileSync('index.html', function (err, data) {
   		if (err) throw err;
 		console.log(data);
 	});
 
-	var buffer = new buffer();
+	
 
-	response.send(buffer.toString('utc 8', fs.readFileSync("index.html")));
+	response.send(data.toString());
 });
 
 var port = process.env.PORT || 5000;
