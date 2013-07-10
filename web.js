@@ -11,8 +11,11 @@ app.get('/', function(request, response) {
 		console.log(data);
 	});
 
+	var buffer = new buffer();
 
-	response.send(data);
+	buffer.write(data);	
+
+	response.send(buffer.toString('utc 8');
 });
 
 var port = process.env.PORT || 5000;
